@@ -63,7 +63,7 @@ VulnGuard, Python standart kütüphanesini kullanır. Ek bağımlılık gerektir
 
 ```bash
 # Depoyu klonlayın
-git clone https://github.com/kullanici/vulnguard.git
+git clone https://github.com/Mystery-Master/Securty-scanner-and-fixer.git
 cd vulnguard
 
 # Doğrudan çalıştırın (bağımlılık yok!)
