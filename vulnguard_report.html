@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>VulnGuard Raporu — F2764517</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600&display=swap');
+  :root{--bg:#0d1117;--surface:#161b22;--border:#30363d;--text:#e6edf3;--muted:#8b949e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;padding:2rem}
+  h1{font-size:1.8rem;font-weight:600;margin-bottom:.25rem;color:#58a6ff}
+  .meta{color:var(--muted);font-size:.85rem;margin-bottom:2rem}
+  .stats{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
+  .stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:.75rem 1.25rem;text-align:center}
+  .stat .num{font-size:2rem;font-weight:600;font-family:'IBM Plex Mono'}
+  .stat .lbl{font-size:.75rem;color:var(--muted);text-transform:uppercase}
+  table{width:100%;border-collapse:collapse;font-size:.85rem}
+  th{background:var(--surface);border-bottom:2px solid var(--border);padding:.6rem 1rem;text-align:left;color:var(--muted);font-weight:400;text-transform:uppercase;font-size:.75rem}
+  td{border-bottom:1px solid var(--border);padding:.6rem 1rem;vertical-align:top}
+  tr:hover td{background:var(--surface)}
+  .badge{padding:.2rem .5rem;border-radius:4px;font-size:.75rem;font-weight:600;color:#000}
+  .fix-badge{background:#1a7f1a;color:#aff;padding:.15rem .4rem;border-radius:3px;font-size:.7rem}
+  .auto-badge{background:#4a3700;color:#ffd;padding:.15rem .4rem;border-radius:3px;font-size:.7rem}
+  .cve{background:#1c1c3a;color:#79c0ff;padding:.15rem .4rem;border-radius:3px;font-size:.7rem;font-family:'IBM Plex Mono'}
+  .vuln-id{color:#8b949e;font-size:.75rem}
+  .snippet{color:#79c0ff;font-size:.75rem;display:block;max-width:300px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  code{font-family:'IBM Plex Mono',monospace}
+</style>
+</head>
+<body>
+<h1>🛡 VulnGuard Güvenlik Raporu</h1>
+<div class="meta">Tarama ID: F2764517 &nbsp;|&nbsp; 2026-05-27 10:26:58 &nbsp;|&nbsp; Hedef: vulnerable_example.py</div>
+<div class="stats">
+  <div class="stat"><div class="num" style="color:#e6edf3">15</div><div class="lbl">Toplam</div></div>
+  <div class="stat"><div class="num" style="color:#ff4444">6</div><div class="lbl">Kritik</div></div>
+  <div class="stat"><div class="num" style="color:#ff8c00">4</div><div class="lbl">Yüksek</div></div>
+  <div class="stat"><div class="num" style="color:#ffd700">5</div><div class="lbl">Orta</div></div>
+  <div class="stat"><div class="num" style="color:#32cd32">0</div><div class="lbl">Düşük</div></div>
+  <div class="stat"><div class="num" style="color:#58a6ff">0</div><div class="lbl">Onarıldı</div></div>
+</div>
+<table>
+<thead><tr><th>ID</th><th>Başlık</th><th>Önem</th><th>Kategori</th><th>Konum</th><th>CVE</th><th>Kod</th></tr></thead>
+<tbody>
+            <tr>
+                <td><code class="vuln-id">SEC-001-ca88a4</code></td>
+                <td>Sabit Şifre Tespit Edildi <span class="auto-badge">⚡ Oto-Onarılabilir</span></td>
+                <td><span class="badge" style="background:#ff4444">KRİTİK</span></td>
+                <td>Sabit Gizli Veri</td>
+                <td><code>vulnerable_example.py:18</code></td>
+                <td></td>
+                <td><code class="snippet">password = "admin123"</code></td>
+            </tr>
+            <tr>
+                <td><code class="vuln-id">SEC-001-aecc9b</code></td>
+                <td>Sabit Şifre Tespit Edildi <span class="auto-badge">⚡ Oto-Onarılabilir</span></td>
+                <td><span class="badge" style="background:#ff4444">KRİTİK</span></td>
+                <td>Sabit Gizli Veri</td>
+                <td><code>vulnerable_example.py:19</code></td>
+                <td></td>
+                <td><code class="snippet">db_password = "super_secret_pass"</code></td>
+            </tr>
+            <tr>
+                <td><code class="vuln-id">SEC-002-a4307f</code></td>
+                <td>Sabit API Anahtarı Tespit Edildi <span class="auto-badge">⚡ Oto-Onarılabilir</span></td>
+                <td><span class="badge" style="background:#ff4444">KRİTİK</span></td>
+                <td>Sabit Gizli Veri</td>
+                <td><code>vulnerable_example.py:22</code></td>
+                <td></td>
+                <td><code class="snippet">api_key = "sk-abcdefghijklmnopqrstuvwxyz1234567890"</code></td>
+            </tr>
+            <tr>
+                <td><code class="vuln-id">SEC-002-3e70b3</code></td>
+                <td>Sabit API Anahtarı Tespit Edildi <span class="auto-badge">⚡ Oto-Onarılabilir</span></td>
+                <td><span class="badge" style="background:#ff4444">KRİTİK</span></td>
+                <td>Sabit Gizli Veri</td>
+                <td><code>vulnerable_example.py:23</code></td>
+                <td></td>
+                <td><code class="snippet">secret_key = "my_super_secret_token_xyz_12345678"</code></td>
+            </tr>
+            <tr>
+                <td><code class="vuln-id">SEC-007-054b60</code></td>
+                <td>Güvensiz pickle.loads Kullanımı </td>
+                <td><span class="badge" style="background:#ff4444">KRİTİK</span></td>
+                <td>Güvensiz Serimleme</td>
+                <td><code>vulnerable_example.py:47</code></td>
+                <td><span class="cve">CWE-502</span></td>
+                <td><code class="snippet">return pickle.loads(data_bytes)</code></td>
+            </tr>
+            <tr>
+                <td><code class="vuln-id">SEC-012-a3f1a5</code></td>
+                <td>Tehlikeli eval() / exec() Kullanımı </td>
+                <td><span class="badge" style="background:#ff4444">KRİTİK</span></td>
+                <td>Enjeksiyon</td>
+                <td><code>vulnerable_example.py:62</code></td>
+                <td><span class="cve">CWE-78</span></td>
+                <td><code class="snippet">return str(eval(expr + ""))</code></td>
+            </tr>
+            <tr>
+                <td><code class="vuln-id">SEC-003-ad5de6</code></td>
+                <td>Olası SQL Enjeksiyon Açığı </td>
+                <td><span class="badge" style="background:#ff8c00">YÜKSEK</span></td>
+                <td>Enjeksiyon</td>
+                <td><code>vulnerable_example.py:37</code></td>
+                <td><span class="cve">CWE-89</span></td>
+                <td><code class="snippet">cursor.execute("SELECT * FROM users WHERE id = '%s'" % user_id)</code></td>
+            </tr>
+            <tr>
+                <td><code class="vuln-id">SEC-004-a4704f</code></td>
+                <td>Tehlikeli os.system / shell=True Kullanımı <span class="auto-badge">⚡ Oto-Onarılabilir</span></td>
+                <td><span class="badge" style="background:#ff8c00">YÜKSEK</span></td>
+                <td>Komut Enjeksiyonu</td>
+                <td><code>vulnerable_example.py:42</code></td>
+                <td></td>
+                <td><code class="snippet">result = subprocess.run(f"ping -c 1 {host}", shell=True, capture_output=True)</code></td>
+            </tr>
+            <tr>
+                <td><code class="vuln-id">SEC-010-5a86a9</code></td>
+                <td>Üretim Ortamında debug=True <span class="auto-badge">⚡ Oto-Onarılabilir</span></td>
+                <td><span class="badge" style="background:#ff8c00">YÜKSEK</span></td>
+                <td>Hata Ayıklama Kodu</td>
+                <td><code>vulnerable_example.py:81</code></td>
+                <td></td>
+                <td><code class="snippet">app.run(debug=True, host="0.0.0.0", port=5000)</code></td>
+            </tr>
+            <tr>
+                <td><code class="vuln-id">SEC-013-e3ba28</code></td>
+                <td>SSL Sertifika Doğrulama Devre Dışı <span class="auto-badge">⚡ Oto-Onarılabilir</span></td>
+                <td><span class="badge" style="background:#ff8c00">YÜKSEK</span></td>
+                <td>Güvensiz Kriptografi</td>
+                <td><code>vulnerable_example.py:67</code></td>
+                <td></td>
+                <td><code class="snippet">return requests.get(url, verify=False)</code></td>
+            </tr>
+            <tr>
+                <td><code class="vuln-id">SEC-005-c3efcc</code></td>
+                <td>Zayıf Hash Algoritması (MD5/SHA1) <span class="auto-badge">⚡ Oto-Onarılabilir</span></td>
+                <td><span class="badge" style="background:#ffd700">ORTA</span></td>
+                <td>Güvensiz Kriptografi</td>
+                <td><code>vulnerable_example.py:27</code></td>
+                <td></td>
+                <td><code class="snippet">return hashlib.md5(pwd.encode()).hexdigest()</code></td>
+            </tr>
+            <tr>
+                <td><code class="vuln-id">SEC-009-d12589</code></td>
+                <td>Kriptografik Amaçla Zayıf random Modülü <span class="auto-badge">⚡ Oto-Onarılabilir</span></td>
+                <td><span class="badge" style="background:#ffd700">ORTA</span></td>
+                <td>Güvensiz Rastgele Sayı</td>
+                <td><code>vulnerable_example.py:31</code></td>
+                <td></td>
+                <td><code class="snippet">return random.randint(100000, 999999)</code></td>
+            </tr>
+            <tr>
+                <td><code class="vuln-id">SEC-011-0b9630</code></td>
+                <td>Hassas Veri Loglama </td>
+                <td><span class="badge" style="background:#ffd700">ORTA</span></td>
+                <td>Hata Ayıklama Kodu</td>
+                <td><code>vulnerable_example.py:56</code></td>
+                <td></td>
+                <td><code class="snippet">print(f"Login attempt: user={username}, password={password}")</code></td>
+            </tr>
+            <tr>
+                <td><code class="vuln-id">SEC-014-936e65</code></td>
+                <td>XML Dış Varlık (XXE) Riski </td>
+                <td><span class="badge" style="background:#ffd700">ORTA</span></td>
+                <td>Enjeksiyon</td>
+                <td><code>vulnerable_example.py:12</code></td>
+                <td><span class="cve">CWE-611</span></td>
+                <td><code class="snippet">import xml.etree.ElementTree as ET</code></td>
+            </tr>
+            <tr>
+                <td><code class="vuln-id">SEC-015-f45060</code></td>
+                <td>Aşırı Geniş Dosya İzinleri <span class="auto-badge">⚡ Oto-Onarılabilir</span></td>
+                <td><span class="badge" style="background:#ffd700">ORTA</span></td>
+                <td>İzin Hatası</td>
+                <td><code>vulnerable_example.py:78</code></td>
+                <td></td>
+                <td><code class="snippet">os.chmod("config.cfg", 0o777)</code></td>
+            </tr></tbody>
+</table>
+</body></html>
